@@ -17,11 +17,15 @@
     <button id = 'make-purple'>Make Purple</button>
     <button id="make-pink">make pink</button>
     <button id="make-goldenRod">make GoldenRod</button>
+    <h3 id="handler-status">Default Text</h3>
+    <button onclick="handleOnClick()">Dom Handlers by Function</button>
     <script src="/DOM/DOM.js"></script>
     <script>
-         document.getElementById('make-goldenRod').addEventListener('click', function(){
-            document.body.style.backgroundColor = 'goldenrod';
-         })
+         function handleOnClick()
+         {
+           const HandlerStatus = document.getElementById('handler-status');
+           HandlerStatus.innerText = 'change handler status';
+         }
     </script>
 </body>
 </html>
