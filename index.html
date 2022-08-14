@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +15,13 @@
     <button onclick="makeBlue()">Make blue</button>
     <button id="make-green">make green</button>
     <button id = 'make-purple'>Make Purple</button>
+    <button id="make-pink">make pink</button>
+    <button id="make-goldenRod">make GoldenRod</button>
     <script src="/DOM/DOM.js"></script>
     <script>
-        const purpleButton = document.getElementById('make-purple');
-        purpleButton.onclick = function beautifulPurple(){
-        document.body.style.backgroundColor = 'purple';
-        } 
+         document.getElementById('make-goldenRod').addEventListener('click', function(){
+            document.body.style.backgroundColor = 'goldenrod';
+         })
     </script>
 </body>
 </html>
