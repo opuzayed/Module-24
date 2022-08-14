@@ -9,9 +9,10 @@
 </head>
 <body>
     <h1 id = "secret-info">Explore Dom Events</h1>
-    <input id = "input-hidden" type="text">
-    <button id="btn-delete">Delete</button>
+    <input id = "delete-confirm" placeholder = 'Please type delete' type="text">
+    <button id="btn-delete" disabled>Delete</button>
     <script>
+
         /* document.getElementById('text-field').addEventListener('focus', function(){
             console.log('input focus');
         })
@@ -21,6 +22,17 @@
         document.getElementById('btn-more').addEventListener('mousemove', function(){
             console.log('event trigger');
         }) */
+        document.getElementById('delete-confirm').addEventListener('keyup', function(event){
+            const text = event.target.value;
+            const deleteButton = document.getElementById('btn-delete');
+            if(text == 'delete')
+            {
+                deleteButton.removeAttribute('disabled');
+            }
+            else{
+                deleteButton.setAttribute('disabled', true)
+            }
+        })
         document.getElementById('btn-delete').addEventListener('click', function(){
             const secret = document.getElementById('secret-info');
             secret.style.display = 'none';
