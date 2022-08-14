@@ -19,6 +19,10 @@
     <button id="make-goldenRod">make GoldenRod</button>
     <h3 id="handler-status">Default Text</h3>
     <button onclick="handleOnClick()">Dom Handlers by Function</button>
+    <button id="event-listener">Handle by event listener</button>
+    <p id="input-text-display">Default Text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
     <script src="/DOM/DOM.js"></script>
     <script>
          function handleOnClick()
@@ -26,6 +30,17 @@
            const HandlerStatus = document.getElementById('handler-status');
            HandlerStatus.innerText = 'change handler status';
          }
+         document.getElementById('event-listener').addEventListener('click', function(){
+            const handlerText = document.getElementById('handler-status');
+            handlerText.innerText = 'change by eventListener';
+         })
+         document.getElementById('btn-update').addEventListener('click', function(){
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+            const p = document.getElementById('input-text-display');
+            p.innerText = inputText;
+            inputField.value = '';
+         })
     </script>
 </body>
 </html>
