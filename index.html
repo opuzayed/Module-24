@@ -13,14 +13,13 @@
     <button onclick="document.body.style.backgroundColor='red'">Another button</button>
     <button onclick="makeBlue()">Make blue</button>
     <button id="make-green">make green</button>
+    <button id = 'make-purple'>Make Purple</button>
     <script src="/DOM/DOM.js"></script>
     <script>
-       const makeGreenButton = document.getElementById('make-green');
-       makeGreenButton.onclick = makeGreen;
-       function makeGreen()
-       {
-        document.body.style.backgroundColor = 'green';
-       }
+        const purpleButton = document.getElementById('make-purple');
+        purpleButton.onclick = function beautifulPurple(){
+        document.body.style.backgroundColor = 'purple';
+        } 
     </script>
 </body>
 </html>
