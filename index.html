@@ -7,8 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>DOM er special day</h1>
-    <button onclick="console.log(10)">click me</button>
+    <h1 onclick="console.log('i am clicked')">DOM er special day</h1>
+    <button title ="this is button" onclick="console.log(10)">click me</button>
+    <br>
+    <button onclick="document.body.style.backgroundColor='red'">Another button</button>
+    <button onclick="makeBlue()">Make blue</button>
+    <button id="make-green">make green</button>
     <script src="/DOM/DOM.js"></script>
+    <script>
+       const makeGreenButton = document.getElementById('make-green');
+       makeGreenButton.onclick = makeGreen;
+       function makeGreen()
+       {
+        document.body.style.backgroundColor = 'green';
+       }
+    </script>
 </body>
 </html>
