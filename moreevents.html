@@ -8,11 +8,11 @@
     <title>Dom</title>
 </head>
 <body>
-    <h1>Explore Dom Events</h1>
-    <button id="btn-more">Event trigger</button>
-    <input id = "text-field" type = "text">
+    <h1 id = "secret-info">Explore Dom Events</h1>
+    <input id = "input-hidden" type="text">
+    <button id="btn-delete">Delete</button>
     <script>
-        document.getElementById('text-field').addEventListener('focus', function(){
+        /* document.getElementById('text-field').addEventListener('focus', function(){
             console.log('input focus');
         })
         document.getElementById('text-field').addEventListener('blur', function(){
@@ -20,6 +20,10 @@
         })
         document.getElementById('btn-more').addEventListener('mousemove', function(){
             console.log('event trigger');
+        }) */
+        document.getElementById('btn-delete').addEventListener('click', function(){
+            const secret = document.getElementById('secret-info');
+            secret.style.display = 'none';
         })
     </script>
 </body>
